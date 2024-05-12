@@ -51,5 +51,5 @@ def calculadora():
             print("¡Hasta luego!")
             break
 
-# Llamar a la función para que se ejecute
+# Llamar a la función para que se ejecute.
 calculadora()
