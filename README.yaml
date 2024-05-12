@@ -1,0 +1,56 @@
+# Calculadora Py
+
+![Calculadora Py](calculator.jpg)
+
+---
+
+## Descripción
+
+Calculadora Py es una aplicación simple de Python que te permite realizar operaciones aritméticas básicas como suma, resta, multiplicación y división.
+
+---
+
+## Características
+
+- Interfaz fácil de usar.
+- Funciona con números flotantes.
+- Manejo de errores para evitar cálculos incorrectos.
+
+---
+
+## Uso
+
+1. Clona el repositorio: `git clone https://github.com/tu_usuario/calculadora-py.git`
+2. Navega al directorio del proyecto: `cd calculadora-py`
+3. Ejecuta el script: `python calculadora.py`
+
+---
+
+## Capturas de Pantalla
+
+### Menú Principal
+
+![Menú Principal](menu.png)
+
+### Suma
+
+![Suma](suma.png)
+
+### Resta
+
+![Resta](resta.png)
+
+### Multiplicación
+
+![Multiplicación](multiplicacion.png)
+
+### División
+
+![División](division.png)
+
+---
+
+## Contribuir
+
+¡Siéntete libre de contribuir! Abre un problema o envía una solicitud de extracción.
+
