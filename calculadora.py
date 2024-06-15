@@ -1,55 +1,45 @@
-def calculadora():
+def calculadora_suma():
     while True:
-        print("Selecciona la operación que deseas realizar:")
-        print("1. Suma")
-        print("2. Resta")
-        print("3. Multiplicación")
-        print("4. División")
-        print("5. Salir")
+        print("\nBienvenido a la calculadora de sumas.")
+        print("1. Realizar una suma")
+        print("2. Salir")
 
-        opcion = input("Ingresa el número de la operación: ")
+        opcion = input("Ingresa el número de la opción: ")
 
-        if opcion == "5":
+        if opcion == "2":
             print("¡Hasta luego!")
             break
 
+        if opcion != "1":
+            print("Opción no válida. Por favor, elige una opción válida.")
+            continue
+
         try:
-            cantidad_numeros = int(input("¿Cuántos números deseas ingresar? "))
+            cantidad_numeros = int(input("¿Cuántos números deseas sumar? "))
+            if cantidad_numeros <= 0:
+                print("Debes ingresar al menos un número.")
+                continue
+
             numeros = []
             for i in range(cantidad_numeros):
-                num = float(input(f"Ingrese el número {i+1}: "))
-                numeros.append(num)
+                while True:
+                    try:
+                        num = float(input(f"Ingrese el número {i+1}: "))
+                        numeros.append(num)
+                        break
+                    except ValueError:
+                        print("Error: Debes ingresar un número válido.")
 
-            if opcion == "1":
-                resultado = sum(numeros)
-                print("La suma es:", resultado)
-            elif opcion == "2":
-                resultado = numeros[0]
-                for num in numeros[1:]:
-                    resultado -= num
-                print("La resta es:", resultado)
-            elif opcion == "3":
-                resultado = 1
-                for num in numeros:
-                    resultado *= num
-                print("La multiplicación es:", resultado)
-            elif opcion == "4":
-                resultado = numeros[0]
-                for num in numeros[1:]:
-                    resultado /= num
-                print("La división es:", resultado)
-            else:
-                print("Opción no válida. Por favor, elige una opción válida.")
+            resultado = sum(numeros)
+            print("La suma es:", resultado)
 
         except ValueError:
             print("Error: Debes ingresar un número válido.")
-        except ZeroDivisionError:
-            print("Error: No se puede dividir por cero.")
 
-        continuar = input("¿Deseas realizar otra operación? (s/n): ")
+        continuar = input("¿Deseas realizar otra suma? (s/n): ")
         if continuar.lower() != "s":
             print("¡Hasta luego!")
             break
 
 # Llamar a la función para que se ejecute.
-calculadora()
+calculadora_suma()
